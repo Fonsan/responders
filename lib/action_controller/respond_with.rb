@@ -9,7 +9,7 @@ module ActionController # :nodoc:
 
     included do
       class_attribute :responder, :mimes_for_respond_to
-      self.responder = ActionController::Responder
+      self.responder ||= ActionController::Responder
       clear_respond_to
     end
 
